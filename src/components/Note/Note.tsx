@@ -14,7 +14,7 @@ interface Prop {
 }
 
 function Note({ note }: Prop) {
-  const [activeDrags, setActiveDrags] = useState<number>(0);
+            const [activeDrags, setActiveDrags] = useState<number>(0);
   const { id, name, zIndex, position, content } = note;
   const [textContent, setTextContent] = useState(content);
 
