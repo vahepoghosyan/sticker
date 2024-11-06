@@ -19,7 +19,7 @@ function MinimizedNote({ note }: Prop) {
     delete minimizedList.value[id];
   };
 
-  const handleRemoveNote = (e: MouseEvent) => {
+  const handleRemoveNote = (e: { stopPropagation: () => void; }) => {
     e.stopPropagation();
     const { [id]: qwe, ...rest } = notes.value;
     notes.value = rest;

@@ -1,4 +1,4 @@
-@import "../../assets//variables.scss";
+@use "../../assets//variables.scss";
 main {
   position: relative;
   height: calc(100vh - 80px);

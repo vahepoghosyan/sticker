@@ -1,7 +1,8 @@
-@import "../../assets//variables.scss";
+@use "../../assets//variables.scss";
+@use "sass:color";
 .nav {
   width: 100%;
-  background: $panel;
+  background: variables.$panel;
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -21,13 +22,13 @@
       left: 0;
       width: 20px;
       height: 20px;
-      background-color: $primary;
+      background-color: variables.$primary;
     }
 
     &::before {
       left: 5px;
       transform: rotate(20deg);
-      background-color: $secondary;
+      background-color: variables.$secondary;
       z-index: 1;
     }
 
@@ -58,25 +59,25 @@
     }
 
     &.primary {
-      background-color: $primary;
+      background-color: variables.$primary;
       &:hover {
-        background-color: darken($primary, 10%);
+        background-color: color.scale(variables.$primary, $lightness: -10%);
       }
     }
 
     &.secondary {
-      background-color: $secondary;
+      background-color: variables.$secondary;
       &:hover {
-        background-color: darken($secondary, 10%);
+        background-color: color.scale(variables.$secondary, $lightness: 10%);
       }
     }
 
     &.remove {
-      color: $remove;
-      border: 1px solid $remove;
+      color: variables.$remove;
+      border: 1px solid variables.$remove;
       &:hover {
-        color: darken($remove, 10%);
-        border-color: darken($remove, 10%);
+        color: color.scale(variables.$remove, $lightness: 10%);
+        border-color: color.scale(variables.$remove, $lightness: 10%);
       }
     }
   }

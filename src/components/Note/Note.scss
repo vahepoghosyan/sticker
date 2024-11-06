@@ -1,3 +1,4 @@
+@use "../../assets//variables.scss";
 .note {
   width: 400px;
   height: 400px;
@@ -11,7 +12,7 @@
     display: flex;
     align-items: center;
     padding: 5px 10px;
-    background-color: #6d3b9c;
+    background-color: variables.$primary;
     cursor: grab;
   }
 
