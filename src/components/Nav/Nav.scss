@@ -1,0 +1,83 @@
+@import "../../assets//variables.scss";
+.nav {
+  width: 100%;
+  background: $panel;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    position: relative;
+    font-weight: 700;
+    font-size: 18px;
+    padding-left: 30px;
+    flex-grow: 1;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background-color: $primary;
+    }
+
+    &::before {
+      left: 5px;
+      transform: rotate(20deg);
+      background-color: $secondary;
+      z-index: 1;
+    }
+
+    span {
+      font-size: 10px;
+      transform: translateY(4px);
+    }
+  }
+
+  button {
+    margin-left: 20px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: opacity 0.25s;
+    background-color: transparent;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    &.primary {
+      background-color: $primary;
+      &:hover {
+        background-color: darken($primary, 10%);
+      }
+    }
+
+    &.secondary {
+      background-color: $secondary;
+      &:hover {
+        background-color: darken($secondary, 10%);
+      }
+    }
+
+    &.remove {
+      color: $remove;
+      border: 1px solid $remove;
+      &:hover {
+        color: darken($remove, 10%);
+        border-color: darken($remove, 10%);
+      }
+    }
+  }
+}

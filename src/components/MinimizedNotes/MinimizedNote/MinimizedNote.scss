@@ -1,0 +1,12 @@
+@import "../../../assets//variables.scss";
+
+.minimized-note {
+  display: flex;
+  align-items: center;
+  width: 150px;
+  background-color: $primary;
+  padding: 4px 10px;
+  border-radius: 4px 4px 0 0;
+  box-shadow: 0 0 12px #301e42;
+  cursor: pointer;
+}
