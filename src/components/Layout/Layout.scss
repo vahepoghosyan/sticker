@@ -1,8 +1,7 @@
-@use "../../assets//variables.scss";
+@use '../../assets//variables.scss';
 main {
-  position: relative;
-  height: calc(100vh - 80px);
-  width: 100%;
-  padding: 20px 20px 40px 20px;
+    position: relative;
+    height: calc(100vh - 80px);
+    width: 100%;
+    padding: 20px 20px 40px 20px;
 }
-

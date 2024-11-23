@@ -1,108 +1,108 @@
-@use "./variables";
+@use './variables';
 
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
 
-  overflow: hidden;
-  min-width: 1024px;
-  min-height: 768px;
-  width: 100%;
-  height: 100vh;
+    overflow: hidden;
+    min-width: 1024px;
+    min-height: 768px;
+    width: 100%;
+    height: 100vh;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #212121;
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #212121;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
+    margin: 0;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+    font-size: 3.2em;
+    line-height: 1.1;
 }
 
 .panel-buttons {
-  display: flex;
-  margin-right: 5px;
-  button {
-    position: relative;
-    margin-right: 6px;
-    display: inline-flex;
-    width: 12px;
-    height: 12px;
-    border-radius: 50px;
-    border: none;
+    display: flex;
+    margin-right: 5px;
+    button {
+        position: relative;
+        margin-right: 6px;
+        display: inline-flex;
+        width: 12px;
+        height: 12px;
+        border-radius: 50px;
+        border: none;
 
-    &.remove-note {
-      transform: rotate(45deg);
-      background-color: variables.$removeNote;
+        &.remove-note {
+            transform: rotate(45deg);
+            background-color: variables.$removeNote;
 
-      &:hover {
-        &::before,
-        &::after {
-          opacity: 1;
+            &:hover {
+                &::before,
+                &::after {
+                    opacity: 1;
+                }
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                opacity: 0;
+                transform: translate(-50%, -50%);
+                width: 8px;
+                height: 2px;
+                background-color: #0000007d;
+                border-radius: 2px;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                opacity: 0;
+                transform: translate(-50%, -50%);
+                width: 2px;
+                height: 8px;
+                background-color: #0000007d;
+                border-radius: 2px;
+            }
         }
-      }
-      &::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        opacity: 0;
-        transform: translate(-50%, -50%);
-        width: 8px;
-        height: 2px;
-        background-color: #0000007d;
-        border-radius: 2px;
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        opacity: 0;
-        transform: translate(-50%, -50%);
-        width: 2px;
-        height: 8px;
-        background-color: #0000007d;
-        border-radius: 2px;
-      }
-    }
-    &.minimize {
-      background-color: variables.$minimize;
-      &:hover {
-        &::before {
-          opacity: 1;
+        &.minimize {
+            background-color: variables.$minimize;
+            &:hover {
+                &::before {
+                    opacity: 1;
+                }
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                opacity: 0;
+                transform: translate(-50%, -50%);
+                width: 8px;
+                height: 2px;
+                background-color: #0000007d;
+                border-radius: 2px;
+            }
         }
-      }
-      &::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        opacity: 0;
-        transform: translate(-50%, -50%);
-        width: 8px;
-        height: 2px;
-        background-color: #0000007d;
-        border-radius: 2px;
-      }
     }
-  }
 }
