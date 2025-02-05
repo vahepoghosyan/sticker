@@ -2,7 +2,7 @@ import { useState, ChangeEvent, useEffect } from 'react';
 import Draggable, { DraggableEventHandler } from 'react-draggable';
 import { notes } from '../../Nav/Nav';
 import { INote } from '../types';
-import { useDebouncedValue } from '@/hooks/useDebounce';
+import { useDebouncedValue } from '@hooks/useDebounce';
 
 import './Note.scss';
 

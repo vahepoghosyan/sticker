@@ -19,7 +19,13 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    "baseUrl": "./",
+    "paths": {
+        "@hooks/*": ["src/hooks/*"],
+        "@hooks": ["src/hooks"]
+    }
   },
   "include": ["src"]
 }
