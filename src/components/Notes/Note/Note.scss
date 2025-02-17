@@ -16,6 +16,32 @@
         cursor: grab;
     }
 
+    .note-name {
+        flex-grow: 1;
+        input {
+            background-color: transparent;
+            border: none;
+            font-weight: bold;
+            font-size: 16px;
+            font-family: 'Inter';
+            padding: 0;
+
+            &:focus-visible {
+                outline: none;
+            }
+
+            &:disabled {
+                color: white;
+                pointer-events: none;
+            }
+        }
+    }
+
+    .edit-button {
+        display: flex;
+        cursor: pointer;
+    }
+
     textarea {
         display: block;
         width: 100%;

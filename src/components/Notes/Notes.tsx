@@ -35,6 +35,16 @@ const handleMoveNoteUp = (id: string, zIndex: number) => {
     };
 };
 
+const handleEditNoteName = (id: string) => (event: React.ChangeEvent<HTMLInputElement>) => {
+    notes.value = {
+        ...notes.value,
+        [id]: {
+            ...notes.value[id],
+            name: event.target.value,
+        },
+    };
+};
+
 function Notes() {
     const notesList = Object.entries(notes.value);
 
@@ -74,6 +84,7 @@ function Notes() {
                         handleMinimize={handleMinimize}
                         handleRemoveNote={handleRemoveNote}
                         handleMoveNoteUp={handleMoveNoteUp}
+                        handleEditNoteName={handleEditNoteName}
                         onStart={onStart}
                         onStop={onStop}
                     />

@@ -16,7 +16,7 @@ const handleAddNote = () => {
         ...notes.value,
         [id]: {
             id,
-            name: `new note ${maxZIndex}`,
+            name: `new note`,
             position: {
                 x: Math.floor((window.innerWidth - 400) * Math.random()),
                 y: Math.floor((window.innerHeight - 480) * Math.random()),
