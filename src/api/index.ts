@@ -18,7 +18,7 @@ export const getProfile = async () => {
                 notes.value = data.notes ? JSON.parse(data.notes) : {};
                 prevNotes.value = data.notes ? JSON.parse(data.notes) : {};
             } else {
-                showNotification({ type: 'error', isOpened: true, message: 'Yo! Please login again!!' });
+                data.message === 'Invalid token' && showNotification({ type: 'error', isOpened: true, message: 'Yo! Please login again!!' });
                 isLoggedIn.value = false;
                 storage.setJWT();
                 console.error('Profile Data failed:', data.status, data.message);
