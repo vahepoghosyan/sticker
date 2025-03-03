@@ -34,6 +34,12 @@ const storage = {
 
         return {};
     },
+    getJWT: () => {
+        return localStorage.getItem('jwt') || '';
+    },
+    setJWT: (token?: string) => {
+        token ? localStorage.setItem('jwt', token) : localStorage.removeItem('jwt');
+    },
 };
 
 export default storage;

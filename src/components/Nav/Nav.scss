@@ -2,6 +2,7 @@
 @use 'sass:color';
 .nav {
     width: 100%;
+    height: 64px;
     background: variables.$panel;
     padding: 20px;
     display: flex;
@@ -40,45 +41,11 @@
 
     button {
         margin-left: 20px;
-        border-radius: 8px;
-        border: 1px solid transparent;
-        padding: 0.6em 1.2em;
-        font-size: 1em;
-        font-weight: 500;
-        font-family: inherit;
-        cursor: pointer;
-        transition: opacity 0.25s;
-        background-color: transparent;
+    }
 
-        &:focus {
-            outline: none;
-        }
-
+    .logout-icon {
         &:hover {
-            opacity: 0.9;
-        }
-
-        &.primary {
-            background-color: variables.$primary;
-            &:hover {
-                background-color: color.scale(variables.$primary, $lightness: -10%);
-            }
-        }
-
-        &.secondary {
-            background-color: variables.$secondary;
-            &:hover {
-                background-color: color.scale(variables.$secondary, $lightness: 10%);
-            }
-        }
-
-        &.remove {
-            color: variables.$remove;
-            border: 1px solid variables.$remove;
-            &:hover {
-                color: color.scale(variables.$remove, $lightness: 10%);
-                border-color: color.scale(variables.$remove, $lightness: 10%);
-            }
+            opacity: 0.8;
         }
     }
 }

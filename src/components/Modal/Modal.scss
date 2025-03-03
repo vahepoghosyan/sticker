@@ -1,0 +1,57 @@
+@use '../../assets//variables.scss';
+
+.modal-wrapper {
+    position: absolute;
+    inset: 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    z-index: 999;
+
+    .modal-single {
+        position: relative;
+        width: 500px;
+        padding: 40px 40px;
+        background-color: #212121;
+        // border: 1px solid variables.$primary;
+        box-shadow: 0 0 12px #301e42;
+        .title {
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid white;
+            background-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .error {
+            display: block;
+            color: #f44336;
+        }
+
+        .submit {
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+
+        .sign-in {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 0;
+        }
+    }
+}

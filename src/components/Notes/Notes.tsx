@@ -1,6 +1,6 @@
 import Note from './Note/Note';
 import './Notes.scss';
-import { notes, maxZIndex } from '../Nav/Nav';
+import { notes, maxZIndex } from '../../store';
 import MinimizedNotes from '../MinimizedNotes/MinimizedNotes';
 import { minimizedList } from '../MinimizedNotes/MinimizedNotes';
 import { INote } from './types';
@@ -71,7 +71,9 @@ function Notes() {
 
     return notesList.length === 0 ? (
         <div className="empty">
-            <h1>Add your first sticker</h1>
+            <h1>
+                Add your notes here my G <span>👑</span>!{' '}
+            </h1>
         </div>
     ) : (
         <>

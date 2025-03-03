@@ -1,4 +1,4 @@
-import { notes, maxZIndex } from '../../Nav/Nav';
+import { notes, maxZIndex } from '../../../store';
 import { minimizedList } from '../MinimizedNotes';
 import { INote } from '../../Notes/types';
 import './MinimizedNote.scss';

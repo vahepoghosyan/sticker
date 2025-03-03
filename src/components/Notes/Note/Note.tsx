@@ -1,6 +1,6 @@
 import { useState, ChangeEvent, useEffect, useRef } from 'react';
 import Draggable, { DraggableEventHandler } from 'react-draggable';
-import { notes } from '../../Nav/Nav';
+import { notes } from '../../../store';
 import { INote } from '../types';
 import { useDebouncedValue } from '@hooks/useDebounce';
 
