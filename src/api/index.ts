@@ -4,7 +4,7 @@ import storage from '../utils/storage';
 import { Signal } from '@preact/signals-react';
 
 export const getProfile = async () => {
-    await fetch('https://sticker-go.onrender.com/api/profile', {
+    await fetch('https://sticker-go-901154874733.us-central1.run.app/api/profile', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -28,7 +28,7 @@ export const getProfile = async () => {
 };
 
 export const userRegistration = async (username: Signal, password: Signal, error: Signal) => {
-    await fetch('https://sticker-go.onrender.com/api/register', {
+    await fetch('https://sticker-go-901154874733.us-central1.run.app/api/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ export const userRegistration = async (username: Signal, password: Signal, error
 };
 
 export const userLogin = async (username: Signal, password: Signal, error: Signal) => {
-    await fetch('https://sticker-go.onrender.com/api/login', {
+    await fetch('https://sticker-go-901154874733.us-central1.run.app/api/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -85,7 +85,7 @@ export const userLogin = async (username: Signal, password: Signal, error: Signa
 };
 
 export const updateNotes = async (setIsLoading: (a: boolean) => void, setIsSuccess: (a: boolean) => void) => {
-    await fetch('https://sticker-go.onrender.com/api/profile', {
+    await fetch('https://sticker-go-901154874733.us-central1.run.app/api/profile', {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
